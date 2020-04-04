@@ -1,0 +1,76 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu main main main right right'
+    'footer footer footer footer footer footer'
+    'footer footer footer footer footer footer';
+  grid-gap: 2rem;
+  height: 100vh;
+  margin: 0 1rem;
+}
+
+.homeHeader {
+  grid-area: header;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  padding: 1rem;
+}
+
+.settings {
+  grid-area: menu;
+  background: #292c31;
+  width: 20rem;
+  height: 40rem;
+  padding: 1rem 1rem;
+  box-sizing: border-box;
+}
+
+.chooseLineWidth {
+  margin-top: 1rem;
+  & input {
+    margin-left: 10px;
+  }
+}
+
+.colorPicker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.drawingArea {
+  grid-area: main;
+  position: relative;
+
+  & > div {
+    width: 800px;
+    height: 600px;
+    background: #292c31;
+    border: 1px solid white;
+  }
+
+  img {
+    display: block;
+    width: 800px;
+    height: 600px;
+    user-select: none;
+  }
+
+  canvas {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1px;
+  }
+}
+
+.rightMenu {
+  grid-area: right;
+}

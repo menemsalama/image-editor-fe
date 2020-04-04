@@ -1,0 +1,13 @@
+@import-normalize;
+
+* {
+  user-select: none;
+}
+
+body {
+  background-color: #171719;
+  min-height: 100vh;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
